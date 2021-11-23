@@ -39,6 +39,7 @@ userSchema.pre('save', function(next) {
       if (err) return next(err);
       // Update the password property with the hash
       user.password = hash;
+      console.log('user password', user.password)
       return next();
     });
   });
